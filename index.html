@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>portfolio</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/2.9.7/jquery.fullpage.min.css"
+      integrity="sha512-q54FvbV+gGBn+NvgaD4gpJ7w4wrO00DgW7Rx503PIhrf0CuMwLOwbS+bXgOBFSob+6GVy1HDPfaRLJ8w2jiS4g=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="./css/style.css" />
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"
+      integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/2.9.7/jquery.fullpage.min.js"
+      integrity="sha512-bxzECOBohzcTcWocMAlNDE2kYs0QgwGs4eD8TlAN2vfovq13kfDfp95sJSZrNpt0VMkpP93ZxLC/+WN/7Trw2g=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <!-- 1. 플러그인 필수 파일 불러오기  -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="./css/style.css" />
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="./js/script.js"></script>
+  </head>
+  <body>
+    <div class="loading">
+      <div class="loading-content">
+        <div class="standing">
+          <!--  <figure><img src="./img/전신샷.png" alt="#" /></figure> -->
+        </div>
+        <div class="LP">
+          <!-- <figure><img src="./img/LP1-2.png" alt="" /></figure> -->
+        </div>
+        <div class="loading-text">
+          <strong>LOADING...</strong>
+          <p>@bongcrew</p>
+        </div>
+      </div>
+    </div>
+
+    <header id="header">
+      <div class="inner">
+        <div class="nav">
+          <!-- <a href="#"><img src="./img/LP2.png" alt="#" /></a> -->
+          <strong>Beyond the Wall</strong>
+          <nav>
+            <ul>
+              <li><a href="#">About</a></li>
+              <li><a href="#">Work</a></li>
+              <li><a href="#">Contact</a></li>
+              <li><a href="#">Process</a></li>
+            </ul>
+          </nav>
+        </div>
+        <div class="btn-menu">button</div>
+      </div>
+    </header>
+
+    <!-- 커스텀 인디케이터 -->
+    <!-- <ul id="myMenu">
+      <li data-menuanchor="sec1" class="active">
+        <a href="#sec1"><b>첫번째</b></a>
+      </li>
+      <li data-menuanchor="sec2">
+        <a href="#sec2"><b>두번째</b></a>
+      </li>
+      <li data-menuanchor="sec3">
+        <a href="#sec3"><b>세번째</b></a>
+      </li>
+      <li data-menuanchor="sec4">
+        <a href="#sec4"><b>네번째</b></a>
+      </li>
+    </ul> -->
+    <!-- 탑 버튼 -->
+    <button class="btn-top"></button>
+
+    <!-- 전체메뉴 -->
+    <div class="all-menu">
+      <button class="btn-close"><i class="hidden">닫기</i></button>
+      <h2>Beyond the Wall</h2>
+      <ul class="all-menu-list">
+        <li><a href="#">About</a></li>
+        <li><a href="#">Work</a></li>
+        <li><a href="#">Contact</a></li>
+        <li><a href="#">Process</a></li>
+      </ul>
+      <em>@bong_crew7</em>
+      <strong>010-8816-5023</strong>
+    </div>
+
+    <!-- 내용 시작 -->
+    <main id="fullpage">
+      <!-- s : home -->
+      <section class="section home">
+        <div class="section-visual section-visual-home">이미지를 배경으로 넣기</div>
+        <div class="inner">
+          <div class="home-text">
+            <h1>Beyond the Wall</h1>
+            <strong class="">한계를 넘어 늘 새롭게 도전하는 디자이너, 고봉관입니다</strong>
+          </div>
+          <div class="home-text-2">
+            <p>Web Design/Publisher</p>
+            <p>@bongcrew</p>
+          </div>
+          <button class="btn-scroll"><b>scroll</b></button>
+        </div>
+      </section>
+      <!-- e : home-->
+
+      <!-- s: about -->
+      <section class="section about">
+        <div class="section-visual section-visual-about">이미지를 배경으로 넣기</div>
+        <div class="inner">
+          <div class="about-contents">
+            <h2>About Me</h2>
+            <ul>
+              <li><a href="">My Story</a></li>
+              <li><a href="">Experience</a></li>
+              <li><a href="">Designer</a></li>
+            </ul>
+          </div>
+        </div>
+      </section>
+      <!-- e: about -->
+
+      <!-- s: work -->
+      <section class="section work">
+        <div class="work-visual section-visual-work">이미지를 배경으로 넣기</div>
+        <div class="inner">
+          <div class="work-box">
+            <!-- 왼쪽 작업 콘텐츠 영역 -->
+            <div class="work-content">
+              <ul>
+                <li class="info-list01">
+                  <div class="work-info">
+                    <h2>Bong's Work</h2>
+                    <p>반응형 웹사이트 VESPA</p>
+                  </div>
+                  <div class="work-data">
+                    <em>Date</em>
+                    <p>2023.00.00 ~ 2023.00.00</p>
+                    <em>Tools</em>
+                    <div class="tools-image">
+                      <!-- <img src="" alt="" />
+                      <img src="" alt="" />
+                      <img src="" alt="" />
+                      <img src="" alt="" /> -->
+                    </div>
+                  </div>
+                </li>
+                <li class="info-list02">
+                  <div class="work-info">
+                    <h2>Bong's Work</h2>
+                    <p>반응형 웹사이트 VESPA</p>
+                  </div>
+                  <div class="work-data">
+                    <em>Date</em>
+                    <p>2023.00.00 ~ 2023.00.00</p>
+                    <em>Tools</em>
+                    <div class="tools">
+                      <!-- <img src="" alt="" />
+                      <img src="" alt="" />
+                      <img src="" alt="" />
+                      <img src="" alt="" /> -->
+                    </div>
+                  </div>
+                </li>
+                <li class="info-list03">
+                  <div class="work-info">
+                    <h2>Bong's Work</h2>
+                    <p>반응형 웹사이트 VESPA</p>
+                  </div>
+                  <div class="work-data">
+                    <em>Date</em>
+                    <p>2023.00.00 ~ 2023.00.00</p>
+                    <em>Tools</em>
+                    <div class="tools">
+                      <!-- <img src="" alt="" />
+                      <img src="" alt="" />
+                      <img src="" alt="" />
+                      <img src="" alt="" /> -->
+                    </div>
+                  </div>
+                </li>
+                <li class="info-list04">
+                  <div class="work-info">
+                    <h2>Bong's Work</h2>
+                    <p>반응형 웹사이트 VESPA</p>
+                  </div>
+                  <div class="work-data">
+                    <em>Date</em>
+                    <p>2023.00.00 ~ 2023.00.00</p>
+                    <em>Tools</em>
+                    <div class="tools">
+                      <!-- <img src="" alt="" />
+                      <img src="" alt="" />
+                      <img src="" alt="" />
+                      <img src="" alt="" /> -->
+                    </div>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <!-- 오른쪽 슬라이더 영역 -->
+            <div class="work-album">
+              <div class="work-slider">
+                <!-- swiper.js -->
+                <!-- 2. 필요한 HTML 구조 작성하기(복사해서) -->
+                <!-- Slider main container -->
+                <div class="swiper top-slider">
+                  <!-- Additional required wrapper -->
+                  <div class="swiper-wrapper">
+                    <!-- Slides -->
+                    <div class="swiper-slide">Slide 1</div>
+                    <div class="swiper-slide">Slide 2</div>
+                    <div class="swiper-slide">Slide 3</div>
+                  </div>
+                  <!-- If we need pagination -->
+                  <div class="swiper-pagination"></div>
+
+                  <!-- If we need navigation buttons -->
+                  <div class="swiper-button-prev"></div>
+                  <div class="swiper-button-next"></div>
+
+                  <!-- If we need scrollbar -->
+                  <div class="swiper-scrollbar"></div>
+                </div>
+
+                <!-- <div class="arrow"></div>
+                <div class="work-indicator"></div> -->
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- e: work -->
+
+      <!-- s: contact -->
+      <section class="section contact">
+        <div class="inner">
+          <h2>CONTACT</h2>
+          <div class="name-card">
+            <div class="name-pic">
+              <!-- <img src="" alt="" /> -->
+            </div>
+            <div class="my-info">
+              <dl>
+                <dt>NAME</dt>
+                <dd>고봉관 / Go Bongkwan</dd>
+                <dt>BIRTH</dt>
+                <dd>1993.05.23</dd>
+                <dt>EMAIL</dt>
+                <dd>bongcrew1@naver.com</dd>
+                <dt>PHONE</dt>
+                <dd>010-8816-5023</dd>
+              </dl>
+
+              <p>fdsafldsafsdaf</p>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- e: contact -->
+    </main>
+  </body>
+</html>
