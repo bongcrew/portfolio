@@ -1,5 +1,9 @@
 @charset 'utf-8';
 
+/* html {
+  font-size: 62.5%;
+} */
+/* 1rem = 10px */
 * {
   margin: 0;
   padding: 0;
@@ -13,10 +17,53 @@ li {
 img {
   vertical-align: top;
 }
+a {
+  text-decoration: none;
+  color: inherit;
+}
 body {
   line-height: 1.6;
 }
-
+@font-face {
+  font-family: 'hakgyoanshim-ggureogi';
+  src: url(../fonts/HakgyoansimGgooreogiR.ttf);
+}
+@font-face {
+  font-family: 'GmarketSans-bold';
+  src: url(../fonts/GmarketSansTTFBold.ttf);
+}
+@font-face {
+  font-family: 'GmarketSans-light';
+  src: url(../fonts/GmarketSansTTFLight.ttf);
+}
+@font-face {
+  font-family: 'GmarketSans-medium';
+  src: url(../fonts/GmarketSansTTFMedium.ttf);
+}
+@font-face {
+  font-family: 'Harmony-bold';
+  src: url(../fonts/Harmony_B.ttf);
+}
+@font-face {
+  font-family: 'Harmony-light';
+  src: url(../fonts/Harmony_L.ttf);
+}
+@font-face {
+  font-family: 'Harmony-medium';
+  src: url(../fonts/Harmony_M.ttf);
+}
+@font-face {
+  font-family: 'pretendard-bold';
+  src: url(../fonts/Pretendard-Bold.otf);
+}
+@font-face {
+  font-family: 'pretendard-medium';
+  src: url(../fonts/Pretendard-Medium.otf);
+}
+@font-face {
+  font-family: 'pretendard-regular';
+  src: url(../fonts/Pretendard-Regular.otf);
+}
 /* .home {
   background: red;
 }
@@ -29,9 +76,9 @@ body {
 .contact {
   background: green;
 } */
-.section {
+/* .section {
   padding: 100px;
-}
+} */
 
 /* 스와이퍼 */
 /* .swiper {
@@ -180,4 +227,189 @@ body {
   100% {
     transform: scale(0.9);
   }
+}
+/* css 시작 */
+.loading {
+  display: none;
+}
+#header {
+  /* position: absolute; */
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100px;
+  /* z-index: 100; */
+}
+.inner {
+  width: 1640px;
+  width: 85.4167%;
+  margin: 0 auto;
+}
+#header .inner {
+  display: flex;
+  align-items: center;
+}
+#header img {
+  width: 100px;
+  height: 100px;
+}
+.nav {
+  font-family: 'hakgyoanshim-ggureogi';
+  display: flex;
+  width: 100%;
+  height: 100%;
+  align-items: center;
+}
+
+.nav strong {
+  font-size: 45px;
+  margin-left: 97px;
+}
+.nav-list {
+  display: flex;
+  font-size: 30px;
+  margin-left: 150px;
+  justify-content: center;
+  gap: 100px;
+}
+.btn-menu {
+  margin-left: 176px;
+  background: #fff;
+  background: url(../img/btn-menu.png) no-repeat 50% 50%;
+  width: 50px;
+  height: 50px;
+}
+/* 메인 1 */
+
+.section-visual {
+  background: url(../img/main-visual.jpg) no-repeat 50% 50%;
+  background-size: cover;
+  height: 100%;
+  position: relative;
+  z-index: -1;
+}
+
+.section-visual::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background: rgba(0, 0, 0, 0.5);
+}
+.home-text {
+  text-align: center;
+  margin-top: 350px;
+}
+.home-text h1 {
+  font-size: 85px;
+  color: #f1d302;
+  font-family: 'Harmony-bold';
+}
+.home-text strong {
+  font-size: 40px;
+  color: #fff;
+  font-family: 'GmarketSans-medium';
+}
+.home-text-2 {
+  font-family: 'hakgyoanshim-ggureogi';
+  color: #fff;
+  margin-top: 100px;
+}
+.home-text-2 p:first-child {
+  font-size: 45px;
+}
+.home-text-2 p {
+  font-size: 40px;
+}
+.btn-scroll {
+  font-size: 24px;
+  font-family: 'Harmony-medium';
+  width: 140px;
+  height: 80px;
+  background: url(../img/btn-scroll.png) no-repeat;
+  color: #fff;
+  position: absolute;
+  right: 600px;
+  bottom: 20px;
+}
+.btn-scroll b:after {
+  content: '';
+  background: url(../img/btn-scroll-arrow.png);
+}
+
+/* 서브 1 */
+.about {
+  background: url(../img/sub-visual.jpeg) no-repeat 50% 50%;
+  background-size: cover;
+  height: 960px !important;
+}
+.about-contents h2 {
+  font-family: 'Harmony-bold';
+  font-size: 80px;
+  color: #f1d302;
+  text-align: center;
+  margin-top: 170px;
+}
+.about-contents ul {
+  display: flex;
+  justify-content: center;
+  gap: 170px;
+  margin-top: 110px;
+}
+.about-contents li {
+  width: 340px;
+  height: 340px;
+  background: #888;
+  border: 1px solid #fff;
+}
+
+/* 서브 2 */
+.work {
+  background: url(../img/sub-visual-2.jpg) no-repeat 50% 50%;
+  background-size: cover;
+  height: 960px !important;
+}
+
+.work-info h2 {
+  font-family: 'Harmony-bold';
+  font-size: 70px;
+  color: #f1d302;
+}
+.work-info p {
+  font-family: 'pretendard-medium';
+  color: #fff;
+  font-size: 35px;
+}
+.work-data {
+  font-family: 'pretendard-regular';
+  color: #a3a3a3;
+  font-size: 20px;
+}
+.swiper-slide {
+  background: url(../img/LP3-2.png) no-repeat 50% 50%;
+}
+/* 서브 3 */
+.contact {
+  background: #000;
+}
+.contact h2 {
+  font-family: 'Harmony-bold';
+  font-size: 80px;
+  color: #f1d302;
+  text-align: center;
+}
+
+.my-info {
+}
+
+.my-info dt {
+  font-family: 'pretendard-medium';
+  font-size: 30px;
+  color: #f1d302;
+  text-align: center;
+}
+.my-info dd {
 }
