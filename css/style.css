@@ -1,9 +1,14 @@
 @charset 'utf-8';
 
-/* html {
+html {
   font-size: 62.5%;
-} */
-/* 1rem = 10px */
+}
+body {
+  font: 1.6rem/1.5;
+  word-break: keep-all;
+} /* 
+1rem = 10px */
+
 * {
   margin: 0;
   padding: 0;
@@ -232,6 +237,18 @@ body {
 .loading {
   display: none;
 }
+
+/* TOP */
+.btn-top {
+  position: fixed;
+  bottom: 10%;
+  right: 10%;
+  width: 50px;
+  height: 50px;
+  background: #ff0;
+  z-index: 100;
+  display: none;
+}
 #header {
   /* position: absolute; */
   position: fixed;
@@ -239,11 +256,15 @@ body {
   left: 0;
   width: 100%;
   height: 100px;
-  /* z-index: 100; */
+}
+#header.hide {
+  top: -100px;
 }
 .inner {
   width: 1640px;
   width: 85.4167%;
+  height: 100%;
+  border: 1px solid #f00;
   margin: 0 auto;
 }
 #header .inner {
@@ -260,6 +281,7 @@ body {
   width: 100%;
   height: 100%;
   align-items: center;
+  color: #fff;
 }
 
 .nav strong {
@@ -268,7 +290,7 @@ body {
 }
 .nav-list {
   display: flex;
-  font-size: 30px;
+  font-size: 25px;
   margin-left: 150px;
   justify-content: center;
   gap: 100px;
@@ -280,16 +302,21 @@ body {
   width: 50px;
   height: 50px;
 }
-/* 메인 1 */
 
-.section-visual {
-  background: url(../img/main-visual.jpg) no-repeat 50% 50%;
-  background-size: cover;
-  height: 100%;
+/* 메인 공통 */
+main section {
   position: relative;
-  z-index: -1;
 }
 
+.section-visual {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  background: url() no-repeat 0 0 / cover;
+}
 .section-visual::before {
   content: '';
   position: absolute;
@@ -299,14 +326,28 @@ body {
   left: 0;
   background: rgba(0, 0, 0, 0.5);
 }
-.home-text {
-  text-align: center;
-  margin-top: 350px;
+
+.section-contents {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border: 1px solid #5f5;
+  width: 86%;
 }
+
+/* 메인1 */
+.section-visual-home {
+  background-image: url(../img/main-visual.jpg);
+}
+.home-text {
+}
+
 .home-text h1 {
   font-size: 85px;
   color: #f1d302;
   font-family: 'Harmony-bold';
+  text-align: center;
 }
 .home-text strong {
   font-size: 40px;
@@ -316,7 +357,6 @@ body {
 .home-text-2 {
   font-family: 'hakgyoanshim-ggureogi';
   color: #fff;
-  margin-top: 100px;
 }
 .home-text-2 p:first-child {
   font-size: 45px;
@@ -331,27 +371,25 @@ body {
   height: 80px;
   background: url(../img/btn-scroll.png) no-repeat;
   color: #fff;
-  position: absolute;
-  right: 600px;
-  bottom: 20px;
 }
-.btn-scroll b:after {
+.btn-scroll::after {
   content: '';
   background: url(../img/btn-scroll-arrow.png);
 }
 
 /* 서브 1 */
-.about {
-  background: url(../img/sub-visual.jpeg) no-repeat 50% 50%;
-  background-size: cover;
-  height: 960px !important;
+.section-visual-about {
+  background-image: url(../img/sub-visual.jpeg);
+}
+.about-contents {
+  position: absolute;
 }
 .about-contents h2 {
   font-family: 'Harmony-bold';
   font-size: 80px;
   color: #f1d302;
   text-align: center;
-  margin-top: 170px;
+  padding-top: 170px;
 }
 .about-contents ul {
   display: flex;
@@ -367,12 +405,28 @@ body {
 }
 
 /* 서브 2 */
-.work {
-  background: url(../img/sub-visual-2.jpg) no-repeat 50% 50%;
-  background-size: cover;
-  height: 960px !important;
+.section-visual-work {
+  background-image: url(../img/sub-visual-2.jpg);
+}
+/* 슬라이더와 연동되는 정보 */
+.slide-info {
+  /* 여길 기준으로 li들을 전부 겹치게 */
+  position: relative;
 }
 
+.slide-info li {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  border: 1px solid #000;
+  opacity: 0;
+  transition: 0.4s;
+}
+
+.slide-info li.active {
+  opacity: 1;
+}
 .work-info h2 {
   font-family: 'Harmony-bold';
   font-size: 70px;
@@ -388,8 +442,27 @@ body {
   color: #a3a3a3;
   font-size: 20px;
 }
+
+.mySlider {
+  border: 1px solid #0f0;
+  width: 90%;
+  height: 700px;
+}
+
+.swiper-wrapper {
+  width: 100%;
+  align-items: center;
+  margin: 0 auto;
+}
+
+.mySlider .swiper-slide {
+  border: 10px solid #ff0;
+  font-size: 5vw;
+}
 .swiper-slide {
-  background: url(../img/LP3-2.png) no-repeat 50% 50%;
+  background: url(../img/LP3-2.png) no-repeat 50% 50% / cover;
+
+  color: #f00;
 }
 /* 서브 3 */
 .contact {

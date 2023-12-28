@@ -1,4 +1,7 @@
 $(function () {
+  //대상을 변수에 저장
+  const $btnTop = $('.btn-top');
+  const $header = $('#header');
   // fullpage 초기화
   $('#fullpage').fullpage({
     // 1. 앵커 설정
@@ -26,53 +29,76 @@ $(function () {
     bigSectionsDestination: 'top',
 
     // 영역 로딩이 되고 나서
-    /*  afterLoad: function (anchorLink, index) {
+    afterLoad: function (anchorLink, index) {
       var loadedSection = $(this);
       console.log('로딩된 후 :' + anchorLink, index, loadedSection);
 
-      if (anchorLink === 'sec4') {
+      if (anchorLink === 'contact') {
         $btnTop.fadeIn();
-      }
-
-      // 두번째 영역에서는 자동 스크롤 취소
-      if (anchorLink === 'sec2') {
-        $.fn.fullpage.setAutoScrolling(false);
       } else {
-        $.fn.fullpage.setAutoScrolling(true);
+        $btnTop.hide();
       }
-    }, */
+    },
+    // 영역에서 떠날 때
+    onLeave: function (index, nextIndex, direction) {
+      var leavingSection = $(this);
+      console.log('영역에서 떠날 때 :' + index, nextIndex, direction, leavingSection);
+
+      // if (index !== 1 && direction === 'up')
+      // if (index === 1) {
+      //     $btnTop.fadeOut();
+      //   }
+
+      if (direction === 'down') {
+        $header.addClass('hide');
+      } else {
+        $header.removeClass('hide');
+      }
+    },
+  });
+
+  // 처음에는 숨기고
+  $btnTop.hide();
+
+  // btn-top 버튼을 클릭했을 때
+  $btnTop.on('click', function (e) {
+    e.preventDefault();
+
+    // fullpage 메서드 : 원하는 영역 이동
+    $.fn.fullpage.moveTo(1);
+  });
+
+  //슬라이더 추가정보 -12/28
+  const swiper = new Swiper('.mySlider', {
+    loop: true,
+    // autoplay: {
+    //   delay: 2000,
+    // },
+
+    // If we need pagination
+    pagination: {
+      el: '.swiper-pagination',
+    },
+
+    // Navigation arrows
+    navigation: {
+      nextEl: '.swiper-button-next',
+      prevEl: '.swiper-button-prev',
+    },
+
+    // 슬라이더와 연동되는 정보
+    on: {
+      slideChange: function () {
+        const sIdx = this.realIndex;
+        // console.log(this);
+
+        const slideInfo = $('.slide-info li');
+        slideInfo.removeClass('active');
+        slideInfo.eq(sIdx).addClass('active');
+      },
+    },
   });
 });
-
-// 슬라이더 시작
-// const topSlider = new Swiper('.top-slider', {
-//   effect: 'coverflow',
-//   grabCursor: true,
-//   centeredSlides: true,
-//   slidesPerView: 'auto',
-//   coverflowEffect: {
-//     rotate: 50,
-//     stretch: 0,
-//     depth: 100,
-//     modifier: 1,
-//     slideShadows: true,
-//   },
-
-// 페이지네이션
-// pagination: {
-//   el: '.top-slider .swiper-pagination',
-// },
-
-// Navigation arrows
-// navigation: {
-//   nextEl: '.top-slider .swiper-button-next',
-//   prevEl: '.top-slider .swiper-button-prev',
-// },
-
-// And if we need scrollbar
-// scrollbar: {
-//   el: '.top-slider .swiper-scrollbar',
-// },
 
 // 로딩!!시작
 //   const $window = $(window);
