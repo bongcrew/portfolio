@@ -28,6 +28,7 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
     <link rel="stylesheet" href="./css/reset.css" />
     <link rel="stylesheet" href="./css/style.css" />
+    <link rel="shortcut icon" href="./img/favicon.png" type="image/x-icon" />
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <script src="./js/script.js"></script>
   </head>
@@ -60,33 +61,15 @@
             </ul>
           </nav>
           <button class="btn-menu">
-            <!-- <img src="./img/btn-menu.png" alt="#" /> -->
+            <a href="#"></a>
           </button>
         </div>
       </div>
     </header>
 
-    <!-- 커스텀 인디케이터 -->
-    <ul id="myMenu">
-      <li data-menuanchor="home" class="active">
-        <a href="#home"><b>첫번째</b></a>
-      </li>
-      <li data-menuanchor="about">
-        <a href="#about"><b>두번째</b></a>
-      </li>
-      <li data-menuanchor="work">
-        <a href="#work"><b>세번째</b></a>
-      </li>
-      <li data-menuanchor="contact">
-        <a href="#contact"><b>네번째</b></a>
-      </li>
-    </ul>
-    <!-- 탑 버튼 -->
-    <button class="btn-top">TOP</button>
-
     <!-- 전체메뉴 -->
-    <!-- <div class="all-menu">
-      <button class="btn-close-menu"><i class="hidden">닫기</i></button>
+    <div class="all-menu">
+      <button class="btn-close-menu"></button>
       <h2>Beyond the Wall</h2>
       <ul class="all-menu-list">
         <li><a href="#">About</a></li>
@@ -94,9 +77,29 @@
         <li><a href="#">Contact</a></li>
         <li><a href="#">Process</a></li>
       </ul>
-      <em>@bong_crew7</em>
-      <strong>010-8816-5023</strong>
-    </div> -->
+      <div class="etc">
+        <em>@bong_crew7</em>
+        <strong>010-8816-5023</strong>
+      </div>
+    </div>
+
+    <!-- 커스텀 인디케이터 -->
+    <ul id="myMenu">
+      <li data-menuanchor="home" class="active">
+        <a href="#home"><b>Home</b></a>
+      </li>
+      <li data-menuanchor="about">
+        <a href="#about"><b>About</b></a>
+      </li>
+      <li data-menuanchor="work">
+        <a href="#work"><b>Work</b></a>
+      </li>
+      <li data-menuanchor="contact">
+        <a href="#contact"><b>Contact</b></a>
+      </li>
+    </ul>
+    <!-- 탑 버튼 -->
+    <button class="btn-top">TOP</button>
 
     <!-- 내용 시작 -->
     <main id="fullpage">
@@ -137,9 +140,9 @@
           </div>
           <h2>About Me</h2>
           <ul>
-            <li><a href="">My Story</a></li>
-            <li><a href="">Experience</a></li>
-            <li><a href="">Designer</a></li>
+            <li class="about1"><a href="#">My Story</a></li>
+            <li class="about2"><a href="#">Experience</a></li>
+            <li class="about3"><a href="#">Designer</a></li>
           </ul>
         </div>
       </section>

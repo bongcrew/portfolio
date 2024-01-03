@@ -45,7 +45,7 @@ $(function () {
     // setTimeout(동작, 시간);
     setTimeout(function () {
       $loading.fadeOut();
-    }, 5000);
+    }, 1000);
   });
   // 1초후에 loading요소 지우기
   // setTimeout(function () {
@@ -55,6 +55,7 @@ $(function () {
   //대상을 변수에 저장
   const $btnTop = $('.btn-top');
   const $header = $('#header');
+  const $nav = $('.nav');
   // fullpage 초기화
   $('#fullpage').fullpage({
     // 1. 앵커 설정
@@ -108,6 +109,29 @@ $(function () {
         $header.removeClass('hide');
       }
     },
+  });
+
+  // 햄버거 메뉴 설정
+  const $btnMenu = $('.btn-menu');
+  const $allMenu = $('.all-menu');
+  const $active = 'active';
+  const $closeMenu = $('.btn-close-menu');
+  // 공통의 동작을 함수로 정의
+  function slideMenu(pos) {
+    $allMenu.animate(
+      {
+        right: pos,
+      },
+      350
+    );
+  }
+  // $btnMenu 클릭했을 때
+  $btnMenu.on('click', function (e) {
+    slideMenu('0%');
+  });
+  // $closeMenu 클릭했을 때
+  $closeMenu.on('click', function (e) {
+    slideMenu('-100%');
   });
 
   // 처음에는 숨기고
