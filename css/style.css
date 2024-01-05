@@ -379,11 +379,14 @@ main section {
 .about-ul li {
   width: 340px;
   height: 340px;
-  background: #888;
-  border: 1px solid #fff;
   color: #fff;
   font-size: 40px;
   padding: 20px;
+  border-radius: 10px;
+  transition: 0.4s;
+}
+.about-ul li:hover {
+  scale: 1.1;
 }
 
 .about-ul a {
