@@ -83,9 +83,10 @@ body {
   right: 10%;
   width: 50px;
   height: 50px;
-  background: #ff0;
+  background: url(../img/btn-top.png);
   z-index: 100;
   display: none;
+  cursor: pointer;
 }
 #header {
   /* position: absolute; */
@@ -133,12 +134,20 @@ body {
   justify-content: center;
   gap: 120px;
 }
+.nav-list li:hover {
+  color: #f1d302;
+}
 .btn-menu {
   margin-left: 176px;
   background: #fff;
   background: url(../img/btn-menu.png) no-repeat 50% 50%;
   width: 50px;
   height: 50px;
+  cursor: pointer;
+  transition: 0.4s;
+}
+.btn-menu:hover {
+  background: url(../img/btn-menu-on.png) no-repeat 50% 50%;
 }
 
 /* 햄버거 메뉴 */
@@ -171,7 +180,8 @@ body {
   gap: 40px;
 }
 
-.all-menu li {
+.all-menu li:hover {
+  color: #f1d302;
 }
 
 .etc {
@@ -193,6 +203,11 @@ body {
   position: absolute;
   top: 5%;
   left: 10%;
+  cursor: pointer;
+  transition: 0.4s;
+}
+.btn-close-menu:hover {
+  background: url(../img/btn-close-on.png) no-repeat 50% 50% / cover;
 }
 
 /* 마이 메뉴 */
@@ -345,62 +360,92 @@ main section {
   text-align: center;
   padding-top: 170px;
 }
-.about-contents ul {
+.about-ul {
   display: flex;
   justify-content: center;
   gap: 170px;
   margin-top: 110px;
 }
-.about-contents li {
+.about-ul li {
   width: 340px;
   height: 340px;
   background: #888;
   border: 1px solid #fff;
   color: #fff;
   font-size: 40px;
-  text-align: center;
+  padding: 20px;
 }
 
-.about-contents a {
-  display: block;
+.about-ul a {
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
   width: 100%;
   height: 100%;
 }
-.popup {
-  position: fixed;
-  top: -100%;
+/* .about-ul b {
+  display: flex;
+  align-items: center;
+} */
+
+.popup-contents {
+  position: absolute;
+  border: 10px solid #f00;
+  width: 1050px;
+  height: 550px;
+  color: #fff;
+  font-size: 30px;
+  top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  width: 1600px;
-  height: 800px;
-  border: 10px solid #f00;
-  background: #fff;
-  padding: 60px;
-  opacity: 0;
-  font-size: 15px;
+  display: none;
+  z-index: 100;
 }
+.popup-contents section {
+}
+
+.btn-close {
+  position: absolute;
+  width: 50px;
+  height: 50px;
+  background: #ff5;
+  top: 0;
+  right: 0;
+}
+
 .dim {
   position: fixed;
   top: 0;
   left: 0;
-  right: 0;
-  bottom: 0;
+  width: 100%;
+  height: 100%;
   background: rgba(0, 0, 0, 0.8);
   display: none;
+  z-index: 99;
 }
-.about-contents li.about1 {
+
+.about-ul .about1 {
   background: url(../img/diary.jpg) no-repeat 50% 50% / cover;
 }
-.about-contents li.about2 {
+.about-ul .about2 {
   background: url(../img/office.jpg) no-repeat 50% 50% / cover;
 }
-.about-contents li.about3 {
+.about-ul .about3 {
   background: url(../img/coding.jpg) no-repeat 50% 50% / cover;
+}
+.about-ul a {
 }
 
 /* 서브 2 */
 .section-visual-work {
   background-image: url(../img/sub-visual-2.jpg);
+}
+.work-content h2 {
+  font-family: 'Harmony-bold';
+  font-size: 70px;
+  color: #f1d302;
+  position: absolute;
+  z-index: 1;
 }
 /* 슬라이더와 연동되는 정보 */
 .slide-info {
@@ -410,7 +455,7 @@ main section {
 
 .slide-info li {
   position: absolute;
-  top: 0;
+  top: 250px;
   left: 0;
   width: 100%;
   /* border: 1px solid #000; */
@@ -420,12 +465,9 @@ main section {
 
 .slide-info li.active {
   opacity: 1;
+  top: 250px;
 }
-.work-info h2 {
-  font-family: 'Harmony-bold';
-  font-size: 70px;
-  color: #f1d302;
-}
+
 .work-info p {
   font-family: 'pretendard-medium';
   color: #fff;
@@ -452,15 +494,14 @@ main section {
 }
 .work-slider {
   height: 720px;
-  border: 1px solid #f5f;
+  /* border: 1px solid #f5f; */
 }
 .mySlider {
-  border: 1px solid #0f0;
-  /* width: 90%; */
-  height: 80%;
+  /* border: 1px solid #0f0; */
+
+  height: 100%;
   width: 60%;
-  /* transform: translateX(30%); */
-  transform: translate(30%, 13%);
+  transform: translateX(30%);
 }
 
 .swiper-wrapper {
@@ -476,7 +517,7 @@ main section {
 }
 .slide1 {
   height: 100%;
-  background: url(../img/LP3-2.png) no-repeat 50% 50% / cover;
+  background: url(../img/LP3-2.png) no-repeat 50% 50% / contain;
 }
 .slide2 {
   height: 80%;
@@ -487,16 +528,49 @@ main section {
   background: url(../img/XL-2.jpg) no-repeat 50% 50% / contain;
 }
 
+.swiper-horizontal > .swiper-pagination-bullets,
+.swiper-pagination-bullets.swiper-pagination-horizontal,
+.swiper-pagination-custom,
+.swiper-pagination-fraction {
+}
+.swiper-horizontal > .swiper-pagination-bullets .swiper-pagination-bullet,
+.swiper-pagination-horizontal.swiper-pagination-bullets .swiper-pagination-bullet {
+  margin: 0 15px;
+}
 .swiper-pagination-bullet {
   background: url(../img/swiper-pagination-bullet.jpg) no-repeat 50% 50% / cover;
   width: 20px;
   height: 20px;
+  opacity: 1;
 }
+
 .swiper-pagination-bullet-active {
   background: url(../img/swiper-pagination-bullet-active.jpg) no-repeat 50% 50% / cover;
   width: 20px;
   height: 20px;
 }
+
+.swiper-button-prev {
+  background: url(../img/swiper-button-prev.png) no-repeat 50% 50% / contain;
+  width: 58px;
+  height: 30px;
+}
+.swiper-button-prev:hover {
+  background: url(../img/swiper-button-prev-on.png) no-repeat;
+}
+.swiper-button-next {
+  background: url(../img/swiper-button-next.png) no-repeat 50% 50% / contain;
+  width: 58px;
+  height: 30px;
+}
+.swiper-button-next:hover {
+  background: url(../img/swiper-button-next-on.png) no-repeat;
+}
+.swiper-button-prev:after,
+.swiper-button-next:after {
+  display: none;
+}
+
 /* 서브 3 */
 .contact {
   background: #000;

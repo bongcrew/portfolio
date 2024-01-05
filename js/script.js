@@ -1,40 +1,37 @@
 $(function () {
   // 대상을 변수에 저장
-  const $popup = $('.popup');
+  const $popup = $('.popup-contents');
+  const $popupContents = $('.popup-contents > section');
   const $btnClose = $('.btn-close');
   const $dim = $('.dim');
 
-  $('.about-contents a').on('click', (e) => {
-    e.preventDefault();
+  console.log($popupContents);
 
+  $popupContents.hide();
+  $btnClose.hide();
+  $dim.hide();
+
+  $('.about-ul li').on('click', function () {
     $dim.fadeIn();
+    $popup.fadeIn();
 
-    // .animate({옵션}, 지속시간, 콜백함수-끝난후의 동작)
-    $popup.animate(
-      {
-        top: '50%',
-        opacity: 1,
-      },
-      300
-      // () => {
-      //   alert('창이 나왔삼!');
-      // }
-    );
+    // 클릭한 놈의 인덱스를 받아와서
+    let pIdx = $(this).index();
+    console.log(pIdx);
+
+    // $popupContents 전부를 먼저 숨기고 : hide()
+    $popupContents.hide();
+    // $popupContents의 인덱스에 해당하는 내용을 show()
+    $popupContents.eq(pIdx).show();
+    $btnClose.show();
   });
 
   // btnClose를 클릭하면 팝업창이 닫히게
   $btnClose.on('click', () => {
-    $popup.animate(
-      {
-        top: '-100%',
-        opacity: 0,
-      },
-      300,
-      () => {
-        $dim.fadeOut();
-      }
-    );
+    $dim.fadeOut();
+    $popup.fadeOut();
   });
+
   // 로딩!!시작
   const $window = $(window);
   const $loading = $('.loading');
@@ -155,6 +152,7 @@ $(function () {
     // If we need pagination
     pagination: {
       el: '.swiper-pagination',
+      clickable: true,
     },
 
     // Navigation arrows
@@ -163,11 +161,10 @@ $(function () {
       prevEl: '.swiper-button-prev',
     },
 
-    // 슬라이더와 연동되는 정보
+    // 슬라이더 변경 테스트
     on: {
       slideChange: function () {
         const sIdx = this.realIndex;
-        // console.log(this);
 
         const slideInfo = $('.slide-info li');
         slideInfo.removeClass('active');
