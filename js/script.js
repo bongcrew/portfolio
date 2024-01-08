@@ -91,21 +91,16 @@ $(function () {
       }
     },
     // 영역에서 떠날 때
-    onLeave: function (index, nextIndex, direction) {
-      var leavingSection = $(this);
-      console.log('영역에서 떠날 때 :' + index, nextIndex, direction, leavingSection);
+    // onLeave: function (index, nextIndex, direction) {
+    //   var leavingSection = $(this);
+    //   console.log('영역에서 떠날 때 :' + index, nextIndex, direction, leavingSection);
 
-      // if (index !== 1 && direction === 'up')
-      // if (index === 1) {
-      //     $btnTop.fadeOut();
-      //   }
-
-      if (direction === 'down') {
-        $header.addClass('hide');
-      } else {
-        $header.removeClass('hide');
-      }
-    },
+    //   if (direction === 'down') {
+    //     $header.addClass('hide');
+    //   } else {
+    //     $header.removeClass('hide');
+    //   }
+    // },
   });
 
   // 햄버거 메뉴 설정
