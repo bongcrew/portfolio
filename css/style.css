@@ -250,7 +250,7 @@ body {
   transform: translateY(-50%);
   right: 0px;
   /* border: 1px solid #f00; */
-  background: #3b3b3b;
+  /* background: #3b3b3b; */
   padding: 8px 10px;
   border-radius: 10px;
   width: 100px;
@@ -334,6 +334,7 @@ main section {
   font-family: 'hakgyoanshim-ggureogi';
   color: #fff;
   margin-top: 130px;
+  text-align: center;
 }
 .home-text-2 p:first-child {
   font-size: 45px;
@@ -357,10 +358,24 @@ main section {
 }
 .btn-scroll::after {
   content: '';
-  background: url(../img/btn-scroll-arrow.png);
+  background: url(../img/btn-scroll-arrow.png) no-repeat 50% 50%;
+  width: 30px;
+  height: 30px;
+  display: block;
+  margin: 0 auto;
 }
 
 /* 서브 1 */
+
+.section-visual-about::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background: rgba(0, 0, 0, 0.8);
+}
 .section-visual-about {
   background-image: url(../img/sub-visual.jpeg);
 }
@@ -468,6 +483,7 @@ main section {
   position: absolute;
   z-index: 1;
   top: 30px;
+  line-height: 1.2;
 }
 /* 슬라이더와 연동되는 정보 */
 .slide-info {
@@ -539,7 +555,7 @@ main section {
   color: #f00;
 }
 .slide1 {
-  height: 100%;
+  height: 80%;
   background: url(../img/맘스터치-앨범.png) no-repeat 50% 50% / cover;
 }
 .slide2 {
@@ -547,8 +563,12 @@ main section {
   background: url(../img/페라리-앨범.png) no-repeat 50% 50% / cover;
 }
 .slide3 {
+  height: 100%;
+  background: url(../img/LP3-2.png) no-repeat 50% 50% / contain;
+}
+.slide4 {
   height: 80%;
-  background: url(../img/LP3-2.png) no-repeat 50% 50% / cover;
+  background: url(../img/liken-mockup.png) no-repeat 50% 50% / contain;
 }
 
 .swiper-horizontal > .swiper-pagination-bullets,
@@ -631,8 +651,9 @@ main section {
 
 .my-info dt {
   font-family: 'pretendard-medium';
-  font-size: 25px;
+  font-size: 18px;
   color: #f1d302;
+  margin-top: 15px;
 }
 .my-info dd {
   font-family: 'pretendard-regular';
@@ -662,9 +683,10 @@ main section {
 
 .standing {
   position: absolute;
-
-  top: -70%;
-  left: -105%;
+  /* top: -70%;
+  left: -105%; */
+  top: -50%;
+  left: -85%;
   z-index: 3;
   rotate: 5deg;
 }
@@ -697,8 +719,8 @@ main section {
 }
 
 .LP img {
-  width: 310px;
-  height: 310px;
+  width: 400px;
+  height: 400px;
 }
 
 .loading-text {
