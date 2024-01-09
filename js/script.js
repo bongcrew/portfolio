@@ -42,7 +42,7 @@ $(function () {
     // setTimeout(동작, 시간);
     setTimeout(function () {
       $loading.fadeOut();
-    }, 1000);
+    }, 3000);
   });
   // 1초후에 loading요소 지우기
   // setTimeout(function () {

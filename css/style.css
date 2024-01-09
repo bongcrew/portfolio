@@ -544,7 +544,7 @@ main section {
 }
 .slide2 {
   height: 80%;
-  background: url(../img/) no-repeat 50% 50% / contain;
+  background: url(../img/페라리-앨범.png) no-repeat 50% 50% / cover;
 }
 .slide3 {
   height: 80%;
@@ -622,7 +622,7 @@ main section {
   /* border: 5px solid #f00; */
   border-radius: 40px;
   background: #fff;
-  background: url(../img/bongkwan-2.jpg) no-repeat 50% 50% / cover;
+  background: url(../img/bongkwan2.jpg) no-repeat 50% 80% / cover;
 }
 .name-pic img {
 }
