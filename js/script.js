@@ -41,8 +41,8 @@ $(function () {
     // 너무 빨리 사라지므로 조금있다가 사라지게끔
     // setTimeout(동작, 시간);
     setTimeout(function () {
-      $loading.fadeOut();
-    }, 3000);
+      $loading.hide();
+    }, 1000);
   });
   // 1초후에 loading요소 지우기
   // setTimeout(function () {

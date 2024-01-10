@@ -320,47 +320,49 @@ main section {
   color: #f1d302;
   font-family: 'Harmony-bold';
   text-align: center;
-  margin-top: 300px;
+  margin-top: -50px;
 }
 .home-text strong {
   font-size: 40px;
   color: #fff;
-  font-family: 'GmarketSans-medium';
+  font-family: 'GmarketSans-light';
   display: block;
   text-align: center;
-  margin-top: 40px;
 }
 .home-text-2 {
   font-family: 'hakgyoanshim-ggureogi';
   color: #fff;
-  margin-top: 130px;
+  margin-top: 70px;
   text-align: center;
 }
 .home-text-2 p:first-child {
   font-size: 45px;
 }
 .home-text-2 p:last-child {
-  font-size: 40px;
+  font-size: 35px;
   /* border: 1px solid #fff; */
 }
 .btn-scroll {
   font-size: 20px;
   font-family: 'Harmony-medium';
-  width: 90px;
-  height: 60px;
+  width: 110px;
+  height: 50px;
   background: url(../img/btn-scroll.png) no-repeat;
   color: #fff;
   position: absolute;
-  right: 400px;
-  bottom: 100px;
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: -100px;
   background: #532e1a;
   border-radius: 50px;
 }
 .btn-scroll::after {
   content: '';
   background: url(../img/btn-scroll-arrow.png) no-repeat 50% 50%;
-  width: 30px;
-  height: 30px;
+  /* width: 30px;
+  height: 30px; */
+  width: 20px;
+  height: 15px;
   display: block;
   margin: 0 auto;
 }
@@ -555,20 +557,20 @@ main section {
   color: #f00;
 }
 .slide1 {
-  height: 80%;
-  background: url(../img/맘스터치-앨범.png) no-repeat 50% 50% / cover;
+  height: 50%;
+  background: url(../img/맘스터치-앨범.png) no-repeat 50% 50% / contain;
 }
 .slide2 {
-  height: 80%;
-  background: url(../img/페라리-앨범.png) no-repeat 50% 50% / cover;
+  height: 50%;
+  background: url(../img/페라리-앨범.png) no-repeat 50% 50% / contain;
 }
 .slide3 {
-  height: 100%;
+  height: 50%;
   background: url(../img/베스파-앨범.png) no-repeat 50% 50% / contain;
 }
 .slide4 {
-  height: 80%;
-  background: url(../img/liken-mockup.png) no-repeat 50% 50% / contain;
+  height: 60%;
+  background: url(../img/liken-mockup-2.png) no-repeat 50% 50% / contain;
 }
 
 .swiper-horizontal > .swiper-pagination-bullets,
@@ -685,14 +687,14 @@ main section {
   position: absolute;
   /* top: -70%;
   left: -105%; */
-  top: -50%;
-  left: -85%;
+  top: 0%;
+  left: -35%;
   z-index: 3;
   rotate: 5deg;
 }
 .standing img {
-  width: 604px;
-  height: 806px;
+  width: 300px;
+  height: 470px;
   background-position: 50% 50%;
   background-repeat: no-repeat;
 }
