@@ -746,3 +746,130 @@ main section {
   color: #f1d302;
   font-size: 45px;
 }
+
+.popup-contents {
+  font-size: 20px;
+}
+
+.con1 {
+  width: 1100px;
+  height: 800px;
+  margin: 0 auto;
+}
+
+.story {
+  margin-top: 70px;
+}
+.story strong {
+  display: block;
+  font-size: 30px;
+  font-weight: 500;
+  margin-top: 20px;
+}
+
+.story p {
+  font-size: 18px;
+  margin-top: 20px;
+}
+
+.story1 {
+  display: flex;
+  justify-content: space-between;
+}
+.story1-text {
+  width: 550px;
+}
+.story2-text {
+  width: 550px;
+}
+
+.con1 img {
+  width: 440px;
+  height: 300px;
+}
+
+.story2 {
+  display: flex;
+  flex-direction: row-reverse;
+  margin-top: 100px;
+  justify-content: space-between;
+}
+.con2 {
+  width: 1400px;
+  height: 800px;
+  margin: 0 auto;
+}
+
+.con2 > div {
+}
+.con2 strong {
+  display: block;
+  text-align: center;
+  margin-top: 100px;
+  font-size: 30px;
+}
+.exp {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 50px;
+}
+.exp1 {
+  flex-direction: column;
+  width: 400px;
+}
+.exp2 {
+  flex-direction: column;
+  width: 400px;
+}
+.exp3 {
+  flex-direction: column;
+  width: 400px;
+}
+.exp-txt strong {
+  display: block;
+  margin-top: 50px;
+  font-size: 20px;
+}
+.con2 img {
+  width: 400px;
+  height: 300px;
+}
+.con3 {
+  width: 1400px;
+  height: 800px;
+  margin: 0 auto;
+}
+.design {
+  display: flex;
+  margin-top: 140px;
+}
+
+.design1 {
+  display: flex;
+}
+.design2 {
+  display: flex;
+  margin-top: 50px;
+}
+.design3 {
+  display: flex;
+  margin-top: 50px;
+}
+.desgin-pic {
+  display: flex;
+  align-items: center;
+}
+.desgin-pic img {
+  width: 510px;
+}
+.design-con {
+  margin-left: 120px;
+}
+
+.des-icon img {
+  width: 140px;
+}
+.des-txt {
+  padding: 20px;
+  background: #333;
+}
