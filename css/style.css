@@ -33,6 +33,12 @@ body {
   font-family: 'hakgyoanshim-ggureogi';
   src: url(../fonts/HakgyoansimGgooreogiR.ttf);
 }
+/* @font-face {
+  font-family: 'HakgyoansimGgooreogiR';
+  src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2307-2@1.0/HakgyoansimGgooreogiR.woff2') format('woff2');
+  font-weight: normal;
+  font-style: normal;
+} */
 @font-face {
   font-family: 'GmarketSans-bold';
   src: url(../fonts/GmarketSansTTFBold.ttf);
@@ -443,7 +449,7 @@ main section {
   width: 50px;
   height: 50px;
   background: #ff5;
-  top: 0;
+  top: 100px;
   right: 0;
   cursor: pointer;
 }
@@ -484,7 +490,7 @@ main section {
   color: #f1d302;
   position: absolute;
   z-index: 1;
-  top: 30px;
+  top: 100px;
   line-height: 1.2;
 }
 /* 슬라이더와 연동되는 정보 */
@@ -762,13 +768,15 @@ main section {
 }
 .story strong {
   display: block;
-  font-size: 30px;
+  font-size: 28px;
   font-weight: 500;
-  margin-top: 20px;
+  margin-top: 90px;
 }
-
+.story1-text strong {
+  text-align: right;
+}
 .story p {
-  font-size: 18px;
+  font-size: 16px;
   margin-top: 20px;
 }
 
@@ -786,6 +794,10 @@ main section {
 .con1 img {
   width: 440px;
   height: 300px;
+  transition: 0.4s;
+}
+.con1 img:hover {
+  scale: 1.1;
 }
 
 .story2 {
@@ -827,15 +839,24 @@ main section {
 }
 .exp-txt strong {
   display: block;
-  margin-top: 50px;
-  font-size: 20px;
+  text-align: center;
+  margin-top: 30px;
+  font-size: 25px;
+}
+.exp-txt p {
+  font-size: 15px;
+  margin-top: 20px;
 }
 .con2 img {
   width: 400px;
   height: 300px;
+  transition: 0.4s;
+}
+.con2 img:hover {
+  scale: 1.1;
 }
 .con3 {
-  width: 1400px;
+  width: 1260px;
   height: 800px;
   margin: 0 auto;
 }
@@ -860,7 +881,7 @@ main section {
   align-items: center;
 }
 .desgin-pic img {
-  width: 510px;
+  width: 440px;
 }
 .design-con {
   margin-left: 120px;
