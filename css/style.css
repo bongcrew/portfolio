@@ -5,7 +5,7 @@ html {
 }
 body {
   font: 1.6rem/1.5;
-  word-break: keep-all;
+  /* word-break: keep-all; */
 } /* 
 1rem = 10px */
 
@@ -449,9 +449,13 @@ main section {
   width: 50px;
   height: 50px;
   background: #ff5;
+  background: url(../img/btn-close.png) no-repeat 50% 50%;
   top: 100px;
   right: 0;
   cursor: pointer;
+}
+.btn-close:hover {
+  background: url(../img/btn-close-on.png) no-repeat 50% 50%;
 }
 
 .dim {
@@ -490,7 +494,7 @@ main section {
   color: #f1d302;
   position: absolute;
   z-index: 1;
-  top: 100px;
+  top: 80px;
   line-height: 1.2;
 }
 /* 슬라이더와 연동되는 정보 */
@@ -501,7 +505,7 @@ main section {
 
 .slide-info li {
   position: absolute;
-  top: 250px;
+  top: 220px;
   left: 0;
   width: 100%;
   /* border: 1px solid #000; */
@@ -511,7 +515,7 @@ main section {
 
 .slide-info li.active {
   opacity: 1;
-  top: 250px;
+  top: 220px;
 }
 
 .work-info p {
@@ -528,7 +532,7 @@ main section {
   font-family: 'pretendard-regular';
   color: #fff;
   font-size: 20px;
-  margin-top: 60px;
+  margin-top: 30px;
 }
 .work-data p {
   margin-top: 5px;
@@ -619,11 +623,51 @@ main section {
 .swiper-button-next:after {
   display: none;
 }
+.process-box {
+  display: flex;
+  gap: 35px;
+  margin-top: 25px;
+  font-size: 25px;
+  text-align: center;
+}
+.box1 a {
+  display: flex;
+  width: 130px;
+  height: 50px;
+  background: #0f0;
+  align-items: center;
+  justify-content: center;
+}
+.box2 a {
+  display: flex;
+  width: 130px;
+  height: 50px;
+  background: #00f;
+  align-items: center;
+  justify-content: center;
+}
+.box3 a {
+  display: flex;
+  width: 130px;
+  height: 50px;
+  background: #f50;
+  align-items: center;
+  justify-content: center;
+}
+.box4 a {
+  display: flex;
+  width: 130px;
+  height: 50px;
+  background: #f5f;
+  align-items: center;
+  justify-content: center;
+}
 
 /* 서브 3 */
 .contact {
   background: #000;
 }
+
 .contact h2 {
   font-family: 'Harmony-bold';
   font-size: 80px;
