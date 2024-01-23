@@ -511,11 +511,13 @@ main section {
   /* border: 1px solid #000; */
   opacity: 0;
   transition: 0.4s;
+  z-index: -55;
 }
 
 .slide-info li.active {
   opacity: 1;
   top: 220px;
+  z-index: 0;
 }
 
 .work-info p {
