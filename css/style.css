@@ -856,7 +856,6 @@ main section {
 
 .story {
   margin-top: 110px;
-  border: 2px solid #fff;
 }
 .story strong {
   display: block;
@@ -875,7 +874,6 @@ main section {
 .story1 {
   display: flex;
   justify-content: space-between;
-  border: 1px solid #f00;
 }
 .story1-text {
   width: 500px;
@@ -897,7 +895,6 @@ main section {
   display: flex;
   margin-top: 50px;
   justify-content: space-between;
-  border: 1px solid #0f0;
 }
 .con2 {
   width: 1400px;
