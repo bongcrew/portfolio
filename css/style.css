@@ -666,6 +666,7 @@ main section {
   display: flex;
   width: 130px;
   height: 50px;
+  border-radius: 30px;
   background: #d7d7d7;
   background: #fff;
   align-items: center;
@@ -679,6 +680,7 @@ main section {
   display: flex;
   width: 130px;
   height: 50px;
+  border-radius: 30px;
   background: #d7d7d7;
   background: #fff;
   align-items: center;
@@ -693,6 +695,7 @@ main section {
   display: flex;
   width: 130px;
   height: 50px;
+  border-radius: 30px;
   background: #d7d7d7;
   background: #fff;
   align-items: center;
@@ -706,6 +709,7 @@ main section {
   display: flex;
   width: 130px;
   height: 50px;
+  border-radius: 30px;
   background: #d7d7d7;
   background: #fff;
   align-items: center;
@@ -867,7 +871,7 @@ main section {
   display: block;
   font-size: 28px;
   font-weight: 500;
-  margin-top: 40px;
+  margin-top: 25px;
   font-family: 'hakgyoanshim-ggureogi';
   color: #f1d302;
 }
